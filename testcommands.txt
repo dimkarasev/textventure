@@ -1,0 +1,1 @@
+die - kill a test guy (outputs offensive death message, and restarts the game)
