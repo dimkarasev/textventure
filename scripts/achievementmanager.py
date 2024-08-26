@@ -38,5 +38,5 @@ def bprint(word):
     print()
     for char in word:
         time.sleep(0.0005)
-        print(char.replace("⡀", " "), end='', flush=True)
+        print(char, end='', flush=True)
     print ()
