@@ -7,27 +7,34 @@ def die(cause):
     deadlist.write(name + " died because of " + cause + "\n")
     deadlist.close()
     
-    randint = random.randint(1, 5)
+    randint = random.randint(1, 10)
     if randint == 1:
         beautyfulprint.exeloong("oh shit ur dead!")
     if randint == 2:
-        beautyfulprint.exeloong("damn... ur dead")
+        beautyfulprint.exeloong("damn... ur dead.")
     if randint == 3:
         beautyfulprint.exeloong("u r dead. skill issue.")
     if randint == 4:
-        beautyfulprint.exeloong("you are dead (this is not what the top would be)")
+        beautyfulprint.exeloong("you are dead. (this is not what the top would be)")
     if randint == 5:
-        beautyfulprint.exeloong("lol u died")
-    
+        beautyfulprint.exeloong("lol u died.")
+    if randint == 6:
+        beautyfulprint.exeloong("you died. (hope you will be ashamed in front of your ancestors)")
+    if randint == 7:
+        beautyfulprint.exeloong("it's too late for " + name  + ".")
+    if randint == 8:
+        beautyfulprint.exeloong("nobody will remember " + name + ".")
+    if randint == 9:
+        beautyfulprint.exeloong("SKILL ISSUE, " + name.upper() + "!")
+    if randint == 10:
+        beautyfulprint.exeloong("what a waste of time and effort!")
     input("enter to exit\n")
     exit()
 
-
-
-
 just_fix_windows_console()
 
-beautyfulprint.exe (awesometextart.logo)
+print (awesometextart.logo)
+#beautyfulprint.exe (awesometextart.logo)
 beautyfulprint.exe ("\033[32m for correct images set console font to NSim Sun \033[0m")
 beautyfulprint.exe ('''
 [ply] - play
@@ -105,7 +112,8 @@ if inp == "2":
 beautyfulprint.exeloong('"\033[0;36mGreetings, my old friend,\033[0m" he says. "\033[0;36mWhat brings you here at this time of night?\033[0m"')
 
 beautyfulprint.exeloong('i became a vampire')
-beautyfulprint.exeloong("\033[0;36mWHAT!? ARE YOU SEROUS?\033[0m")
+beautyfulprint.exeloong("\033[0;36m...\033[0m")
+beautyfulprint.exeloong("WHAT!? ARE YOU SEROUS?")
 beautyfulprint.wait()
 beautyfulprint.exeloong('\n[after a long talk]\n')
 
