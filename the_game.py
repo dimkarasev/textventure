@@ -137,12 +137,12 @@ while inp != "1":
 
 beautyfulprint.exe("\033[32mAnyway, you started your journey to the cursed mountain\033[0m")
 beautyfulprint.wait()
-beautyfulprint.exe("On your way, you met a girl who was crying under a tree...\ngirl said - i cant take my cat from the tree! can you help me?")
+beautyfulprint.exe("On your way, you met a girl who was crying under a tree...\ngirl said: ''i cant take my cat down from the tree! can you help me?''")
 
 beautyfulprint.exe('''
 what will you do?
 [1] - do nothing
-[2] - try to take downd a cat
+[2] - try to take down a cat
 ''')
 inp = "reset"
 
@@ -151,7 +151,7 @@ while True:
     if inp == "2":
         beautyfulprint.exeloong("\033[0;95mchecking dexterity...\033[0m")
         dex = random.randint(0, 8) + Pstate.dexterity
-        bar.draw(dex, 8, 5)
+        bar.draw(dex, 8, 4)
         if dex >= 5:
             print("you did it!")
             beautyfulprint.exeloong("thank you, stranger! - girl says")
