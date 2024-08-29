@@ -1,6 +1,10 @@
-from scripts import beautyfulprint, awesometextart, achievementmanager
+from scripts import beautyfulprint, awesometextart, achievementmanager, Pstate, bar
 from colorama import just_fix_windows_console
 import random
+just_fix_windows_console()
+
+
+
 name = "random_guy"
 def die(cause):
     deadlist = open("The hall of stupidity.txt", "a")
@@ -27,11 +31,11 @@ def die(cause):
     if randint == 9:
         beautyfulprint.exeloong("SKILL ISSUE, " + name.upper() + "!")
     if randint == 10:
-        beautyfulprint.exeloong("what a waste of time and effort!")
+        beautyfulprint.exeloong("you died. what a waste of time and effort!")
     input("enter to exit\n")
     exit()
 
-just_fix_windows_console()
+
 
 print (awesometextart.logo)
 #beautyfulprint.exe (awesometextart.logo)
@@ -112,14 +116,54 @@ if inp == "2":
 beautyfulprint.exeloong('"\033[0;36mGreetings, my old friend,\033[0m" he says. "\033[0;36mWhat brings you here at this time of night?\033[0m"')
 
 beautyfulprint.exeloong('i became a vampire')
-beautyfulprint.exeloong("\033[0;36m...\033[0m")
-beautyfulprint.exeloong("WHAT!? ARE YOU SEROUS?")
+beautyfulprint.exeloong(".........")
+beautyfulprint.exeloong("\033[0;36mWHAT!? ARE YOU SEROUS?\033[0m")
 beautyfulprint.wait()
 beautyfulprint.exeloong('\n[after a long talk]\n')
 
 
 beautyfulprint.exeloong("\033[0;36mSo... you need to go yo the mt.Cursed. \nthere you will find the mushroom for the potion of restoration.\033[0m")
 
+beautyfulprint.exe('''
+what will you do?
+[1] - go out and find a mushroom
+[2] - ask if something can help you
+''')
+inp = "reset"
+while inp != "1":
+    inp = input("\n>>>")
+    if inp == "2":
+        beautyfulprint.exeloong("\033[0;36msorry, my friend, but i cant give you anything now\033[0m")
+
+beautyfulprint.exe("\033[32mAnyway, you started your journey to the cursed mountain\033[0m")
+beautyfulprint.wait()
+beautyfulprint.exe("On your way, you met a girl who was crying under a tree...\ngirl said - i cant take my cat from the tree! can you help me?")
+
+beautyfulprint.exe('''
+what will you do?
+[1] - do nothing
+[2] - try to take downd a cat
+''')
+inp = "reset"
+
+while True:
+    inp = input("\n>>>")
+    if inp == "2":
+        beautyfulprint.exeloong("\033[0;95mchecking dexterity...\033[0m")
+        dex = random.randint(0, 8) + Pstate.dexterity
+        bar.draw(dex, 8, 5)
+        if dex >= 5:
+            print("you did it!")
+            beautyfulprint.exeloong("thank you, stranger! - girl says")
+            print("\033[32myou recieved 2 golden coins! (" + str(Pstate.coins) + "+2)\033[0m")
+            Pstate.coins += 2
+            break
+        else: 
+            print("nah, too bad")
+            break
+    if inp == "1":
+        beautyfulprint.exeloong("you just walked away. what an asshole.")
+        break
 
 
 
@@ -156,8 +200,4 @@ beautyfulprint.exeloong("\033[0;36mSo... you need to go yo the mt.Cursed. \nther
 
 
 
-
-
-
-
-input("adventure ended. any key to close")
+input("adventure ended. enter to close")
